@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 1fr;
+      
+}
+header div button{
+    width:100%;
+}
