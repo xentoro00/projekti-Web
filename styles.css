@@ -1,14 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-header{
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 0.2fr 1fr 0.2fr;
-    grid-template-rows: 1fr;
-      
+
+header {
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0 5px 5px rgba(57, 63, 72, 0.3);
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    padding: 0px 30px;
 }
-header div button{
-    width:100%;
+
+header .left {
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+header .left img {
+    height: 90%;
+}
+
+header .right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.header-menu {
+    list-style-type: none;
+}
+
+.menu-item {
+    margin-left: 30px;
+    display: inline;
 }
