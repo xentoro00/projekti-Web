@@ -1,50 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="login.css">
-</head>
-<body>
+<html>
+  <head>
+    <title>Account</title>
+    <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
 
-  <div class="container" id="container">
-    <div class="form-container sign-up">
-      <form action="">
-        <h2>Sign Up</h2>  
-        <span>or use your email for Registeration</span>
-        <input type="text" placeholder="Name"/>
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
-        <button>Sign Up</button>
-      </form>
-  </div>
-  </div>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
 
-  <div class="form-container sign-in">
-    <form action="">
-     <span> or use your email password</span>
-     <input type="email" placeholder="Email">
-     <input type="Password" placeholder="Password">
-     <a href="#">Forget your password</a>
-     <button>Sign In</button>
-    </form>
-  </div>
+      <div class="singup">
+        <form action="/">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="txt" placeholder="User name">
 
-  <div class="toggle-container">
-    <div class="toggle">
-      <div class="toggle-panel toggle-left">
-        <h1>Welcome Back</h1>
-        <p>Enter your personal details to use all of site features</p>
-      <button class="hidden " id="login">Sign in</button>
+          <input type="email" name="email" id="" placeholder="Email" required="">
+          <input type="password" name="pswd"  placeholder="Password" id=""required="">
+          <input type="password" name="pswd" id="" placeholder="ConfirmPassword" required="">
+          <button>Sign up</button>
+        </form>
       </div>
-      <div class="toggle-panel toggle-right">
-        <h1>Hello, Friend!</h1>
-        <p>Register with your personal details to youse all of site features</p>
-      <button class="hidden" id="register">Sign Up</button>
+      <div class="login">
+        <form action="/">
+          <label for="chk" aria-hidden="true">Login</label>
+          
+          <input type="email" id="" name="email" placeholder="Email here" required="">
+          <input type="password" id="" name="password" placeholder="Password here" required="">
+          <button>Login</button>
+
+          <p>Don't have account <a href="#">Create account</a></p>
+      
+        </form>
       </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+    
+    
+
+  </body>
 </html>
