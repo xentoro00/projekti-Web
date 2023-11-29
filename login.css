@@ -1,106 +1,51 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: sans-serif;
-
+body{
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aqua;
+    
 }
 
-.main{
-    width: 350px;
-    height: 480px;
-    background-color: rgba(111, 129, 224);
-    overflow: hidden;
+.login-container{
+    background-color: rgba(255, 255, 255, 8.7);
+    width: 300px;
+    margin: 0px auto;
+    padding: 30px 40px;
     border-radius: 10px;
-    box-shadow: 5px 30px 50px black;
-}
-#chk{
-    display: none;
 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-/* .signup{
-    position: relative;
-    width: 100%;
-    height: 100px;
-}*/
-
-label{
-    color: white;
-    font-size: 35px;
-    justify-content: center;
+.login-container h3{
+    text-align: center;
+    font-weight: 800;
+    color: #007BFF;
+}
+form{
     display: flex;
-    margin: 60px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form input:nth-child(3){
+    width: 100px !important;
+}
+.login-container input{
+    display: block;
     margin-bottom: 10px;
 }
 
-input{
-    width: 60%;
-    height: 20px;
-    background-color: white;
-    justify-content: center;
-    display: flex;
-    margin: 18px auto;
+.login-container input[type="text"], .login-container input[type="password"]{
+width: 100px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+.login-container input[type="submit"]{
+    width: 100%;
     padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-}
-
- button{
-    width: 60%;
-    height: 40px;
-    margin: 10px auto;
-    justify-content: center;
-    display: block;
+    background-color: #007BFF;
     color: white;
-    background: rgb(43, 83, 194);
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 18px;
-    outline: none;
-    border: none;
-    border-radius: 10px;
-    transition: .3s ease-in;
+    bottom: none;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 5px 20px 40px black;
-
-} 
-
-button:hover{
-    background: rgb(20, 57, 105);
 }
-
-.login
-{
-    height: 460px;
-    background: #eee;
-    border-radius: 60% / 10%;
-    transform: translateY(-180px);
-    transition: .8s ease-in-out;
-}
-.login label {
-    color: #573b8a;
-    transform: scale(.6);
-}
-.login p {
-    text-align: center;
-    padding: 20px;
-}
-
-#chk:checked ~ .login{
-    transform: rotateY(-500px);
-}
-
-#chk:checked ~ .login label {
-    transform: scale(1);
-}
-
-#chk:checked ~ .login label{
-    transform: scale(.6);
-} 
