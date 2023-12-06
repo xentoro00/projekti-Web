@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    box-shadow: 0 5px 5px rgba(57, 63, 72, 0.3);
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    padding: 0px 30px;
+    top: 0;
+}
+
+header .left {
+    height: 100%;
+    float: left;
+}
+
+header .left a  {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header .left a  img{
+    height: 90%;
+}
+
+header .right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    float: right;
+}
+
+.header-menu {
+    list-style-type: none;
+}
+
+.menu-item {
+    margin-left: 30px;
+    display: inline;
+}
+.menu-item a{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+main {
+    padding: 20px;
+    margin-top: 100px; /* Shto marginë e barabartë me lartësinë e header-it */
+}
+
+
+.featured-products {
+    background-color: #267bb5;
+    text-align: center;
+}
+
+.featured-products h2 {
+    color: #333;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    text-align: start;
+}
+
+.product img {
+    max-width: 40%;
+    height: 90px;
+}
+
+
+
+
+.product h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.product p {
+    color: #555;
+}
+
+.product button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #267bb5;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

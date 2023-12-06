@@ -59,3 +59,8 @@ form{
     border-radius: 9px;
     cursor: pointer;
 }
+
+.i{
+    padding: 8px 16px;
+  color: #0cd6a8;
+}
