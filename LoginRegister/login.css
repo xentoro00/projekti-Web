@@ -29,9 +29,7 @@ form{
 
 }
 
-form input:nth-child(3){
-    width: 100px !important;
-}
+
 .login-container input{
     display: block;
     margin-bottom: 10px;
@@ -51,8 +49,4 @@ border-radius: 5px;
     bottom: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-p {
-   
 }
