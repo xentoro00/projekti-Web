@@ -81,7 +81,12 @@ main {
     height: 90px;
 }
 
-
+.product-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 kolona të barabarta */
+    gap: 20px; /* Hapësirë midis kolonave */
+    justify-content: space-between; /* Vendos kolonat në të gjithë hapësirën e disponueshme */
+}
 
 
 .product h3 {
