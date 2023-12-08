@@ -124,4 +124,9 @@ main{
 .swiper-container{
     padding:50px 15%;
 }
+#currentUser{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
 

@@ -11,5 +11,5 @@
 function addToCart(productName) {
     alert('Product ' + productName + ' added to cart!');
 }
-// var currentUser = sessionStorage.getItem("currentUser");
-// document.getElementById("currentUser").innerText = currentUser;
+var currentUser = sessionStorage.getItem("currentUser")? sessionStorage.getItem("currentUser") : 'Not logged in';
+document.getElementById("currentUser").innerText = currentUser;
