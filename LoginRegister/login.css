@@ -41,7 +41,7 @@ padding: 10px;
 border: 1px solid #ccc;
 border-radius: 5px;
 }
-.login-container input[type="submit"]{
+.login-container input[type="button"]{
     width: 100%;
     padding: 10px;
     background-color: #007BFF;
