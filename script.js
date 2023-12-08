@@ -24,6 +24,7 @@ if (loginForm) {
     console.error('Element with ID "loginForm" not found.');
 };
 
+const signupForm = document.getElementById('signupForm');
 if (loginForm) {
     loginForm.addEventListener('submit', function (event) {
         // Kodet e ngjarjes së formës së hyrjes
@@ -33,7 +34,6 @@ if (loginForm) {
     console.error('Element with ID "loginForm" not found.');
 }
         // Krijoni një referencë për formën
-        const signupForm = document.getElementById('signupForm');
 
         // Shtoni një dëgjues për ngjarjen e paraqitjes së formës
         signupForm.addEventListener('submit', function (event) {
