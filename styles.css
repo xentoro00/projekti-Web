@@ -3,7 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100vh;
+}
 body{
+    height: 100%;
     background-color: lightgray;
     min-width: 410px;
     overflow-x: hidden;
