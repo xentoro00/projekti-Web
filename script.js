@@ -7,7 +7,18 @@
 //         price:100.00€
 //      }
 // ]
-
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener("click", () => {
+    if (sessionStorage.getItem("currentUser")) {
+        if (confirm("Sign out?")) {
+            sessionStorage.setItem("currentUser", "");
+            currentUser = 'Log in';
+            document.getElementById("currentUser").innerText = currentUser;
+        }
+    }else{
+        window.location.replace("./LoginRegister/login.html");
+    }
+})
 function addToCart(productName) {
     alert('Product ' + productName + ' added to cart!');
 }
