@@ -62,7 +62,7 @@ header .right {
     display: inline-flex;
 }
 .menu-item:first-child{
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .menu-item a{
     min-width: 32px;
