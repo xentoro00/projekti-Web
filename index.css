@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+body {
+  background-color: #585d73;
+  min-width: fit-content;
+  overflow-x: hidden;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+header {
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0 5px 5px rgba(57, 63, 72, 0.3);
+  display: inline-block;
+  height: 100px;
+  min-width: 410px;
+  width: 100%;
+  background-color: white;
+  padding: 0px 30px;
+  top: 0;
+}
+
+header .left {
+  height: 100%;
+  float: left;
+}
+
+header .left a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+header .left a img {
+  height: 90%;
+}
+
+header .right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+.header-menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
+  display: inline-flex;
+}
+.menu-item:first-child {
+  margin-right: 20px;
+}
+.menu-item a {
+  min-width: 32px;
+  max-height: 32px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+main {
+  position: relative;
+  margin-top: 100px;
+}
+.main-image {
+  z-index: 0;
+  width: 1400;
+}
+.description p {
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(#c872f2, #f772d1);
+  max-height: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-div {
+  display: inline-flex;
+}
+.description {
+  position: relative;
+  width: 90%;
+  height: inherit;
+  border-radius: 30px;
+  padding: 50px;
+  min-width: 350px;
+  display: flex;
+  align-items: center;
+}
+.img-div {
+  border-bottom: 10px solid gray;
+  display: flex;
+  padding-bottom: -5px;
+}
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.shopnow-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background: #f772d1;
+  border: none;
+  z-index: 1;
+}
+.shopnow-btn:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #c872f2;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.shopnow-btn:hover {
+  color: #fff;
+}
+.shopnow-btn:hover:after {
+  left: 0;
+  width: 100%;
+}
+.shopnow-btn:active {
+  top: 2px;
+}
