@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  overflow-x: hidden;
+    min-width: 400px;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+main{
+  padding-left:250px;
+  padding-top:100px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  color: #27ae60;
+  background: #fff;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: rgba(0, 128, 0, 0.15); 
+}
+form .btn {
+  font-size: 1rem;
+  border: 1px solid #27ae60;
+}
+.message {
+  display: block;
+  background: #eee;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.admin-product-form-container.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.admin-product-form-container form {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #eee;
+}
+
+.admin-product-form-container form h3 {
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+  .admin-product-form-container form .box {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1.1rem 1.5rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-transform: none;
+}
+
+  .product-display {
+  margin: 1rem 0;
+}
+
+  .product-display .product-display-table {
+  width: 100%;
+  text-align: center;
+}
+
+  .product-display .product-display-table thead {
+  background: #eee;
+}
+
+  .product-display .product-display-table th {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+  .product-display .product-display-table td {
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 0.1rem solid #333;;
+}
+
+  .product-display .product-display-table td:last-child {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+  .product-display .product-display-table .btn:first-child {
+  margin-top: 0;
+}
+
+.product-display .product-display-table .btn:last-child,
+  .red {
+  color: crimson;
+}
+
+.product-display .product-display-table .btn:last-child:hover,
+  .red:hover {
+  background-color: rgba(220, 20, 60, 0.15);
+}
+  form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+  .admin-product-form-container form .box:focus,
+  .admin-product-form-container form .box:focus {
+  border: 2px solid black;
+}
+@media (max-width: 991px) {
+    html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+    .product-display {
+    overflow-y: scroll;
+  }
+
+    .product-display .product-display-table {
+    width: 80rem;
+  }
+}
+
+@media (max-width: 450px) {
+    html {
+    font-size: 50%;
+  }
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.page-header {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.breadcrumb-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.breadcrumb-item.active {
+  color: #000;
+}
+
+.card {
+  margin-top: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+img {
+  max-height: 100px;
+}
+
+
+.action-icons a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.action-icons a:hover {
+  text-decoration: underline;
+}
