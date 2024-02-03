@@ -5,7 +5,11 @@
     <head>
         <title>helo</title>
         <link rel="stylesheet" href="shop.css?v=<?php echo time(); ?>">
-
+    <style>
+        body{
+            justify-content: normal !important;
+        }
+    </style>
     </head>
     <body>
     <?php include 'header.php'; ?>

@@ -3,7 +3,6 @@ include_once './database/databaseConnection.php';
 if (strlen($_SESSION['adminid']==0)) {
   header('location:logout.php');
   } else{
-// for deleting user
 if(isset($_GET['id']))
 {
 $messageID=$_GET['id'];
@@ -34,49 +33,43 @@ echo "<script>alert('Data deleted');</script>";
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Manage Contacts</h1>
+                        <h1 class="mt-4">Manage Users</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Manage Contacts</li>
                         </ol>
             
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Contact messages
+                                Users 
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
                                              <th>Sno.</th>
-                                  <th>Name</th>
-                                  <th>Email </th>
-                                  <th>Message</th>
-                                  <th>Time</th>
+                                  <th>Username</th>
+                                  <th>Password </th>
                                   <th>Action</th>
                                         </tr>
                                     </thead>
                                   
                                     <tbody>
                                               <?php                          
-             include_once './repository/contactRepository.php';
+             include_once './repository/userRepository.php';
 
-             $contactRepository = new ContactRepository();
+             $userRepository = new UserRepository();
 
-             $contacts = $contactRepository->getAllContacts();
+             $users = $userRepository->getAllUsers();
 
-             foreach($contacts as $contact){
+             foreach($users as $user){
              ?>
                               <tr>		
-                              <td><?php echo $contact["MessageID"] ?></td>
-                                  <td><?php echo $contact['Name'];?></td>
-                                  <td><?php echo $contact['Email'];?></td>
-                                  <td><?php echo $contact['Message'];?></td>  
-                                  <td><?php echo $contact['Time'];?></td>  
-                                  <td>
-                                  <a href='delete.php?id=<?php echo $contact["MessageID"] ?>'>Delete</a>
-                                   </td>
+     <td><?php echo $user["User_ID"]; ?></td>
+        <td><?php echo $user['Username']; ?></td>
+        <td>Hidden</td> 
+        <td>
+            <a href='delete.php?id=<?php echo $user["User_ID"]; ?>'>Delete</a>
+        </td>
                               </tr>
                               <?php  }?>
                                     </tbody>

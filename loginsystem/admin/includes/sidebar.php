@@ -80,6 +80,16 @@
                                 B/w Dates Report
                             </a>
 
+                            <a class="nav-link" href="../Users/dashboard.php">
+                                <div class="sb-nav-link-icon"><i class="fa fa-users"></i></div>
+                                Manage Users
+                            </a>
+                            
+                            <a class="nav-link" href="../AboutUs/dashboard.php">
+                                <div class="sb-nav-link-icon"><i class="fa fa-calendar"></i></div>
+                                Edit AboutUs
+                            </a>
+
                             <a class="nav-link" href="../dashboard/logout.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
                                 Signout

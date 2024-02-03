@@ -191,6 +191,21 @@ if (strlen($_SESSION['adminid']==0)) {
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <?php
+                        $query=mysqli_query($con,"select * from users");
+                        $totalusers=mysqli_num_rows($query);
+                    ?>
+                    <div class="card-body">Total Registered Users
+                        <span style="font-size:1.5rem;"> <?php echo $totalusers;?></span>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../Users/dashboard.php">View Details</a>
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

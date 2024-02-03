@@ -27,7 +27,15 @@
         <link rel="stylesheet" href="../css/style.css?<?php echo time(); ?>">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 
-  
+        <style>
+     form select{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 100px;
+    font-size: 1rem;
+
+     }
+   </style>
     </head>
 <body>
 <?php include_once './controller/registerController.php';?>
@@ -40,8 +48,17 @@
                <input type="text" placeholder="enter product name" name="name" class="box">
                <input type="text" placeholder="enter product description" name="description" class="box">
                <input type="number" step="0.01" min="1"  placeholder="enter product price" name="price" class="box">
-               <input type="number" step="1" min="1"  placeholder="Category ID" name="category" class="box">
-               <input type="file" accept="image/png, image/jpeg, image/jpg" name="image" class="box">
+               <label for="category">Category:</label>
+         <select name="category" required>
+            <?php
+               $conn = mysqli_connect('localhost','root','','onlinestore');
+               $query = "SELECT * FROM categories";
+               $result = mysqli_query($conn, $query);
+               while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<option value='{$row['id']}'>{$row['kategoria']}</option>";
+               }
+            ?>
+         </select>               <input type="file" accept="image/png, image/jpeg, image/jpg" name="image" class="box">
                <input type="submit" class="btn" name="registerBtn" value="add product">
             </form>
          </div>

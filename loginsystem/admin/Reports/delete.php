@@ -1,7 +1,7 @@
 <?php
 
 $reportId = $_GET['id'];
-include_once '../repository/reportRepository.php';
+include_once './repository/reportRepository.php';
 
 $reportRepository = new ReportRepository();
 

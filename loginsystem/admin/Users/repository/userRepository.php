@@ -1,7 +1,7 @@
 <?php 
 include_once './database/databaseConnection.php';
 
-class ContactRepository{
+class UserRepository{
     private $connection;
 
     function __construct(){
@@ -9,10 +9,10 @@ class ContactRepository{
         $this->connection = $conn->startConnection();
     }
 
-    function getAllContacts(){
+    function getAllUsers(){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM contact_messages";
+        $sql = "SELECT * FROM users";
 
         $statement = $conn->query($sql);
         $users = $statement->fetchAll();
@@ -20,20 +20,20 @@ class ContactRepository{
         return $users;
     }
 
-    function getContactById($id){
+    function getUserById($id){
         $conn = $this->connection;
 
-        $sql = "SELECT * FROM contact_messages WHERE id='$id'";
+        $sql = "SELECT * FROM users WHERE id='$id'";
 
         $statement = $conn->query($sql);
         $user = $statement->fetch();
 
         return $user;
     }
-    function deleteContact($id){
+    function deleteUsers($id){
         $conn = $this->connection;
 
-        $sql = "DELETE FROM contact_messages WHERE MessageID=?";
+        $sql = "DELETE FROM users WHERE User_ID=?";
 
         $statement = $conn->prepare($sql);
 

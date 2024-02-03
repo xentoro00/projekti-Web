@@ -1,5 +1,8 @@
 <?php 
 include_once './database/databaseConnection.php';
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 class ProductRepository{
     private $connection;
@@ -65,7 +68,7 @@ class ProductRepository{
 
         $statement = $conn->prepare($sql);
 
-        $adminId = $_SESSION['adminid'];
+        // $adminId = $_SESSION['adminid'];
         $statement->execute([$name,$description,$price,$Base64Img,$category,$id]);
         $report = "Admin With ID=> '$adminId' Updated Product: '$name' With Product Id: '$id'";
         $this->insertReport("Update", $report);
@@ -75,23 +78,28 @@ class ProductRepository{
 
     function deleteProduct($id){
         $conn = $this->connection;
-
-        $sql = "DELETE FROM products WHERE ProduktID=?";
-
-        $statement = $conn->prepare($sql);
-
-        $statement->execute([$id]);
-
-        
-        $adminId = $_SESSION['adminid'];
-        $productId = $product->getId();
-        $name = $this->getProductById($id)->getName();
-        $report = "Admin With ID=> '$adminId' Deleted Product: '$name' With Product Id: '$productId'";
-        $this->insertReport("Delete", $report);
-
-
-        echo "<script>alert('delete was successful'); </script>";
-   } 
+    
+        // Fetch the product first
+        $product = $this->getProductById($id);
+    
+        if ($product) {
+            $adminId = $_SESSION['adminid'];
+            $productId = $product['ProduktID'];
+            $name = $product['Emri'];
+    
+            $sql = "DELETE FROM products WHERE ProduktID=?";
+            $statement = $conn->prepare($sql);
+            $statement->execute([$id]);
+    
+            $report = "Admin With ID=> '$adminId' Deleted Product: '$name' With Product Id: '$productId'";
+            $this->insertReport("Delete", $report);
+    
+            echo "<script>alert('delete was successful'); </script>";
+        } else {
+            // Handle the case where the product is not found
+            echo "<script>alert('Product not found.'); </script>";
+        }
+    }
    function imgToBase64($img){
         if (isset($img) && $img['error'] === UPLOAD_ERR_OK) {
             $fileContent = file_get_contents($img['tmp_name']);
@@ -104,7 +112,6 @@ class ProductRepository{
    function insertReport($reportType, $reportMessage) {
     $conn = $this->connection;
     $adminId = $_SESSION['adminid'];
-    // You can customize the report insertion logic as needed
     $sql = "INSERT INTO reports (adminID, reportType, report) VALUES (?, ?, ?)";
 
     $statement = $conn->prepare($sql);
